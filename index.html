@@ -876,6 +876,12 @@ const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => { toTop.classList.toggle('show', window.scrollY > 400); });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 </script>
-
+<script>
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data); // check if working
+  });
+</script>
 </body>
 </html>
